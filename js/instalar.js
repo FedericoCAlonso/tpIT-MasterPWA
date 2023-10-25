@@ -1,3 +1,4 @@
+const urlStart = "/tpIT-MasterPWA";
 let bip = null;
 
 // Administrar el botón de instalación
@@ -34,5 +35,5 @@ document.addEventListener("DOMContentLoaded", event => {
     });
 })
 
-navigator.serviceWorker.register("/sw.js");
+navigator.serviceWorker.register(urlStart+"/sw.js");
 navigator.storage.persist();
