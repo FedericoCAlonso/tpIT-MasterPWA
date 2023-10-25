@@ -89,7 +89,7 @@ all;
 
   /* Estilos del menú */
   .menu {
-    border: 2px solid red;
+  
     display: var(--menu-display);
     flex-direction: var(--menu-flex-direction);
     justify-content: var(--menu-justify-content);
