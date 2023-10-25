@@ -86,7 +86,7 @@ html{
  
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1000px) and (orientation: portrait) {
   :root {
     
     /* selector .secciones*/
