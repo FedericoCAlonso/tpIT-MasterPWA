@@ -4,11 +4,11 @@ self.addEventListener("install", async event => {
 
     // precache - al momento de instalar el SW, vamos a descargar archivos para servir luego
     const cache = await caches.open("recursos");
-    await cache.addAll(["/", "index.html", "./CSS/*", "./assets/iconos/images/logoLocoWeather_512.png",
-    "./assets/iconos/images/logoSimple.png", 
-    "https://fonts.googleapis.com/css2?family=Lobster&display=swap",
-    "https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap"
-]);
+    await cache.addAll(["/", "index.html", "./CSS/fonts.css","./CSS/navbar.css","./CSS/paleta.css",
+        "./CSS/style.css", "./assets/iconos/images/logoLocoWeather_512.png","./assets/iconos/images/logoSimple.png", 
+        "https://fonts.googleapis.com/css2?family=Lobster&display=swap",
+        "https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap"
+    ]);
     console.log("Archivos cacheados");
 
     // Se instaló el SW pero todavía está esperando, no está activo
@@ -23,7 +23,7 @@ self.addEventListener('fetch', (event) => {
 });
 
 // Network first
-async function handleRequest2(request) {
+/* async function handleRequest(request) {
     try {
         const networkResponse = await fetch(request);
         return networkResponse;
@@ -32,7 +32,7 @@ async function handleRequest2(request) {
         const cachedResponse = await cache.match(request);
         return cachedResponse;
     }
-}
+} */
 
 async function handleRequest(request) {
     const cache = await caches.open("recursos");

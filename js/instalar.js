@@ -37,4 +37,5 @@ document.addEventListener("DOMContentLoaded", event => {
     });
 })
 
-
+navigator.serviceWorker.register("/sw.js");
+navigator.storage.persist();
