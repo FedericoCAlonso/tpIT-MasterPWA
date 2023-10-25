@@ -4,7 +4,7 @@
     "display": "standalone",
     "theme_color": "#1aabcf",
     "background_color": "#F3FFE2",
-    "start_url": "/",
+    "start_url": "/tpIT-MasterPWA/",
     "scope": "./",
     "id": "/",
     "description": "Sí, otra aplicación del clima",
