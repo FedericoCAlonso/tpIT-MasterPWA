@@ -10,12 +10,12 @@
     "description": "Sí, otra aplicación del clima",
     "screenshots": [
         {
-            "src": "./tpIT-MasterPWA/assets/Images/capturaLocoWeather-1080x2400.png",
+            "src": "./assets/Images/capturaLocoWeather-1080x2400.png",
             "type": "image/png",
             "sizes": "1080x2400"
         },
         {
-            "src": "./tpIT-MasterPWA/assets/Images/capturaLocoWeather-1920x1080.png",
+            "src": "./assets/Images/capturaLocoWeather-1920x1080.png",
             "type": "image/png",
             "sizes": "1920x1080"
         }
@@ -23,12 +23,12 @@
     ],
     "icons": [
         {
-            "src": "./tpIT-MasterPWA/assets/iconos/logoLocoWeather_512.png",
+            "src": "./assets/iconos/logoLocoWeather_512.png",
             "type": "image/png",
             "sizes": "512x512"
         },
         {
-            "src": "./tpIT-MasterPWA/assets/iconos/logoLocoWeather_512.png",
+            "src": "./assets/iconos/logoLocoWeather_512.png",
             "type": "image/png",
             "sizes": "512x512",
             "purpose": "maskable"    
