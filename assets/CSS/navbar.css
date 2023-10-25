@@ -7,11 +7,13 @@ all;
 
 :root{
     --navbar-height: 60px;
+    --absolute-min-width: 412px;
 
     /* Class menu*/
     --menu-display: flex;
     --menu-flex-direction: row;
     --menu-justify-content: right;
+    --menu-aling-items: center;
     --menu-width: 100%;
     --menu-position: static;
     --menu-position-top: none; 
@@ -24,14 +26,15 @@ all;
 
 }
 
-@media (max-width: 1000px) and (orientation: portrait) {
+@media (max-width: 980px) and (orientation: portrait) {
   /* Ocultar el menú y mostrar el botón de conmutación */
   :root {
-    --navbar-height: 5vh;
+    --navbar-height: 10vh;
     /* Class menu*/
     --menu-display: none;
     --menu-flex-direction: column;
     --menu-justify-content: space-around;
+    --menu-aling-items: end;
     --menu-width: 100%;
     --menu-position: absolute;
     --menu-position-top: var(--navbar-height);
@@ -44,10 +47,8 @@ all;
   
   /* Mostrar el menú cuando el botón de conmutación esté activo */
   .toggle.active + .menu {
-    left: 0;
+    left: 10px;
     display: block;
-
-
   }
 
 }
@@ -65,6 +66,7 @@ all;
     color: var(--fuente-navbar);
     height: var(--navbar-height);
     width: 100vw;
+    min-width: var(--absolute-min-width);
   }
 
   /* Estilos del logo */
@@ -87,15 +89,18 @@ all;
 
   /* Estilos del menú */
   .menu {
+    border: 2px solid red;
     display: var(--menu-display);
     flex-direction: var(--menu-flex-direction);
     justify-content: var(--menu-justify-content);
+    align-items: var(--menu-aling-items);
     width: var(--menu-width);
     background-color: var(--fondo-menu);
     position: var(--menu-position);
     top: var(--menu-position-top);
+    left: 0px;
     list-style: none;
-    margin-left: auto;
+   /*  margin-left: auto; */
     font-size: var(--menu-font-size);
   }
 
@@ -112,11 +117,12 @@ all;
 
   /* Estilos del botón de conmutación */
   .toggle {
-    height: 95%;
+    height: 100%;
     display: var(--toggle-display);
+    align-items: center;
     cursor: pointer;
     padding: 10px;
-    margin-left: var(--toggle-margin-left);
+    /* margin-left: var(--toggle-margin-left); */
     background-color: var(--color-boton-menu);
     border-radius: 5px;
   }
@@ -124,8 +130,8 @@ all;
   /* Estilos del icono del botón de conmutación */
   .toggle span {
     display: block;
-    width: 60px;
-    height: 8px;
+    width: 40px;
+    height: 3px;
     background-color: var(--fuente-navbar);
     margin-bottom: 5px;
   }

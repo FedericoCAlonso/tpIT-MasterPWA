@@ -1,8 +1,3 @@
-
-importScripts("sw-helper.js");
-
-
-
 self.addEventListener("install", async event => {
     // sólo si queremos forzar al viejo SW a dejar de estar activo
     // event.skipWaiting();
@@ -46,46 +41,14 @@ async function handleRequest(request) {
     const cachedResponse = await cache.match(request);
     if (cachedResponse) {
         const networkResponse = await fetch(request);
-        cache.put(request, networkResponse.clone()); // actualiza el cache
+        cache.put(request, networkResponse.clone()); 
 
         return cachedResponse;
     }
   
     const networkResponse = await fetch(request);
-    // lazy cache
-    // cache.put(request, networkResponse.clone()); // actualiza el cache
+
   
     return networkResponse;
     
 }
-
-// self.addEventListener("fetch", async event => {
-//     // una vez por cada recurso HTTP que cualquier página en mi scope esté solicitando
-//     console.log(event.request);
-//     // Cache First
-//     event.respondWith(
-//         (async () => {
-//             const cache = await caches.open("recursos");
-//             const response = await cache.match(event.request);
-//             if (response!=undefined) {
-//                 // Está en el cache
-//                return response;
-//             } else {
-//                 // No está
-//                return fetch(response);
-//             }
-//         })()
-//     )
-    
-
-//     // FAKE RESPONSE
-//     // const response = new Response("hola, <b>estoy en el SW</b>", {
-//     //     headers: {
-//     //         "Content-Type": "text/html"
-//     //     }
-//     // });
-//     // responder por el recurso
-//     // if (event.request.url=="http://localhost:5500/") {
-//     //     event.respondWith(response);
-//     // }
-// })

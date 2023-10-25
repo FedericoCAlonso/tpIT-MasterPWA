@@ -6,27 +6,28 @@
 
 :root{
     --tipo-fuente-LocoWeather: 'Lobster', sans-serif;
-    --tamanio-fuente-LocoWeather: 2em;
+    --tamanio-fuente-LocoWeather: 2rem;
 
     font-family: 'Tilt Neon', sans-serif;
-    --tamanio-fuente-h2: 2em;
-    --tamanio-fuente-informe: 2em;
-    --label-fomr-font-size: 1.5em;
-    --input-form-font-size: 1em;
-    --p-tarjeta-font-size: 1em;
+    --menu-font-size: 1rem;
+    --tamanio-fuente-h2: 2rem;
+    --tamanio-fuente-informe: 2rem;
+    --label-fomr-font-size: 1.5rem;
+    --input-form-font-size: 1rem;
+    --p-tarjeta-font-size: 1rem;
 
 }
 
-@media (max-width: 1000px) and (orientation: portrait) {
+@media (max-width: 980px) and (orientation: portrait) {
     :root{
 
-        --tamanio-fuente-LocoWeather: 4em;
-        --tamanio-fuente-h2: 3em;
-        --tamanio-fuente-informe: 2em;
-        --label-fomr-font-size: 2em;
-        --input-form-font-size: 2em;
-        --p-tarjeta-font-size: 2em;
-        --menu-font-size: 2em;
+        --tamanio-fuente-LocoWeather: 2rem;
+        --tamanio-fuente-h2: 1.5rem;
+        --tamanio-fuente-informe: 1rem;
+        --label-fomr-font-size: 1rem;
+        --input-form-font-size: 1rem;
+        --p-tarjeta-font-size: 1rem;
+        --menu-font-size: 1rem;
     }
     
 }

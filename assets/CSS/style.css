@@ -22,13 +22,13 @@ html{
 /* Los colores están definidos en archivo paleta.css
   Las configuraciones de fuentes están en el archivo fonts.css*/
 :root{
+  --main-absolute-min-width: 500px;
 
   /* selector .secciones*/
   --secciones-margin: auto;
   --secciones-padding-top: var(--navbar-height);
   --secciones-width: 90vw;
   --secciones-height: 100vh;
-  --secciones-min-width: 800px ;
   --secciones-min-height: 500px;
 
   /* selector .tarjetas*/
@@ -87,15 +87,15 @@ html{
  
 }
 
-@media (max-width: 1000px) and (orientation: portrait) {
+@media (max-width: 980px) and (orientation: portrait) {
   :root {
     
     /* selector .secciones*/
     
     --secciones-padding-top: var(--navbar-height);
     --secciones-width: 100vw;
+    --secciones-margiin: 0px;
     --secciones-height: auto;
-    --secciones-min-width: 300px ;
     --secciones-min-height: 500px;
 
     /* selector .tarjetas*/
@@ -158,7 +158,7 @@ html{
  
   width: var(--secciones-width);
   height: var(--secciones-height);
-  min-width: var(--secciones-min-width);
+  min-width: var(--main-absolute-min-width);
   min-height: var(--secciones-min-height);
 
 }

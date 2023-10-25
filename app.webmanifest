@@ -2,12 +2,25 @@
     "name": "Loco Weather PWA",
     "short_name": "LocoWeather",
     "display": "standalone",
-    "theme_color": "#F0A",
-    "background_color": "#FFF",
+    "theme_color": "#1aabcf",
+    "background_color": "#F3FFE2",
     "start_url": "",
     "scope": "./",
     "id": "/",
-    "description": "Sí, otra aplicación del clima, pero desde otra perspectiva",
+    "description": "Sí, otra aplicación del clima",
+    "screenshots": [
+        {
+            "src": "./assets/Images/capturaLocoWeather-1080x2400.png",
+            "type": "image/png",
+            "sizes": "1080x2400"
+        },
+        {
+            "src": "./assets/Images/capturaLocoWeather-1920x1080.png",
+            "type": "image/png",
+            "sizes": "1920x1080"
+        }
+
+    ],
     "icons": [
         {
             "src": "./assets/iconos/logoLocoWeather_512.png",
