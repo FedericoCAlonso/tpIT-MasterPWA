@@ -22,7 +22,7 @@ html{
 /* Los colores están definidos en archivo paleta.css
   Las configuraciones de fuentes están en el archivo fonts.css*/
 :root{
-  --main-absolute-min-width: 500px;
+  --main-absolute-min-width: 412px;
 
   /* selector .secciones*/
   --secciones-margin: auto;

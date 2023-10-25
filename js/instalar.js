@@ -14,9 +14,6 @@ document.addEventListener("DOMContentLoaded", event => {
 
     if (matchMedia("(display-mode: standalone)").matches) {
        
-        document.querySelector("head").innerHTML = `
-            <meta name="google" content="notranslate">
-        `;
     }
 
     document.querySelector("#instalacion button").addEventListener("click", async (event) => {
