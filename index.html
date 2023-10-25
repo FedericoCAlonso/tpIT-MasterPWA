@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title id="title">Loco Weather </title>
+    <link rel="manifest" href="app.webmanifest">
+    <link id="icono" rel="icon" href="./assets//iconos/logoLocoWeather_512.png">
+    <link rel="stylesheet" href="./assets/CSS/style.css">
+    <script>
+        navigator.serviceWorker.register("/sw.js");
+        navigator.storage.persist();
+    </script>
+ 
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <img src="./assets/iconos/logoSimple.png" alt="logo locoweather">
+                <h1>locoweather</h1>
+            </div>
+            
+
+            <div id="navbutton" class="toggle" >
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+        
+    
+            <ul class="menu">
+              <li><a href="#">Inicio</a></li>
+              <li><a href="#nota-interes">Nota de interés</a></li>
+              <li><a href="#empresa">Empresa</a></li>
+            </ul>
+          </div>
+    </header>
+    <main>
+        <section id="tarjeta-clima" class="secciones">
+            <div class="tarjetas">
+                <h2>Clima en tu ciudad</h2>
+                <form id="form-clima">
+                    <div class="form-grupo">
+                        <label for="ciudad">Nombre de la ciudad</label>
+                        <input type="text" class="form-control" id="ciudad" placeholder="Ejemplo: Buenos Aires">
+                        <button type="submit">Consultar</button>
+                    </div>
+                    
+                </form>
+                <div id="resultado-clima"></div>
+
+            </div>
+        </section>
+        <section id="nota-interes" class="secciones">
+            <div class="tarjetas">
+                <h2>Sobre el clima</h2>
+                <p>
+                    El clima se define como las condiciones meteorológicas medias que caracterizan a un lugar determinado.Es una síntesis del tiempo atmosférico, obtenida a partir de estadísticas a largo plazo. Los elementos meteorológicos a tomar en cuenta son la temperatura, la presión, el viento, la humedad y la precipitación.
+                </p>
+                <p>
+                    El clima difiere del tiempo meteorológico en que la meteorología solo describe las condiciones de corto plazo de estas variables en una región dada. Así, el clima de un lugar o una región está constituido por los datos estadísticos de la meteorología de dicho lugar o región analizados a lo largo de un plazo relativamente largo, de 30 años o más, como señala F. J. Monkhouse (1978). Los componentes meteorológicos que suelen tomarse como elementos climáticos son cinco, como ya se ha indicado arriba.
+
+                </p>
+                <p>
+                    El clima de una ubicación está afectado por su latitud, altitud, orientación del relieve, distancia al mar y corrientes marinas, que constituyen lo que se conoce como factores modificadores del clima. Los climas pueden clasificarse según la media y las gamas típicas de los cinco elementos señalados, principalmente temperatura y precipitación. El esquema de clasificación más utilizado la clasificación climática de Köppen, originalmente desarrollada por Wladimir Köppen, es la utilizada en el mapa que acompaña esta introducción con datos actuales de 1980 a 2016.6​ El sistema Thornthwaite, en uso desde 1948, incorpora la evapotranspiración junto con la información de temperatura y precipitación y se utiliza en el estudio de la diversidad biológica y los efectos potenciales de cambios de clima sobre ella.​ Los sistemas de clasificación de Bergeron y Spacial Synoptic se centran en el origen de las masas de aire que definen el clima de una región.
+        
+
+                </p>
+
+
+
+            </div>
+        </section>
+        <section id="empresa" class="secciones">
+            <div class="tarjetas">
+                <h2>Empresa</h2>
+
+            </div>
+
+        </section>
+
+    </main>
+    <footer>
+        <h3>locoweather by Federico Alonso</h3>
+    </footer>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/responsive.js"></script>
+</body>
+</html>

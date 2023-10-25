@@ -1,0 +1,30 @@
+/*Fuente logo*/
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+/*Fuente general*/
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+
+
+:root{
+    --tipo-fuente-LocoWeather: 'Lobster', sans-serif;
+    --tamanio-fuente-LocoWeather: 2rem;
+
+    font-family: 'Tilt Neon', sans-serif;
+    --tamanio-fuente-h2: 2rem;
+    --tamanio-fuente-informe: 2rem;
+    --label-fomr-font-size: 1.5rem;
+    --input-form-font-size: 1rem;
+
+}
+
+@media (max-width: 768) {
+    :root{
+
+   
+        --tamanio-fuente-LocoWeather: 2rem;
+        --tamanio-fuente-h2: 2rem;
+        --tamanio-fuente-informe: 1.5rem;
+        --label-fomr-font-size: 1.5rem;
+        --input-form-font-size: 1.5rem;
+    }
+    
+}

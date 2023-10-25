@@ -1,0 +1,155 @@
+@import
+url(paleta.css)
+all;
+@import
+url(fonts.css)
+all;
+
+:root{
+    --navbar-height: 60px;
+
+    /* Class menu*/
+    --menu-display: flex;
+    --menu-flex-direction: row;
+    --menu-justify-content: right;
+    --menu-width: 100%;
+    --menu-position: static;
+    --menu-position-top: none; 
+
+    /* Class toggle*/
+    --toggle-display: none;
+   
+    --toggle-margin-left: 0; 
+
+
+}
+
+@media (max-width: 768px) {
+  /* Ocultar el menú y mostrar el botón de conmutación */
+  :root {
+    /* Class menu*/
+    --menu-display: none;
+    --menu-flex-direction: column;
+    --menu-justify-content: space-around;
+    --menu-width: 100%;
+    --menu-position: absolute;
+    --menu-position-top: var(--navbar-height);
+
+    /* Class toggle*/
+    --toggle-display: block; 
+    --toggle-margin-left: auto; 
+  }
+  
+  /* Mostrar el menú cuando el botón de conmutación esté activo */
+  .toggle.active + .menu {
+    left: 0;
+    display: block;
+
+  }
+
+}
+
+  /* Estilos de la barra de navegación */
+  .navbar {
+    display: flex;
+    position: fixed;
+    top:0;
+    left:0;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--fondo-navbar);
+    color: var(--fuente-navbar);
+    height: var(--navbar-height);
+    width: 100vw;
+  }
+
+  /* Estilos del logo */
+  .logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .logo h1{
+    font-family: var(--tipo-fuente-LocoWeather);
+    font-size: var(--tamanio-fuente-LocoWeather);
+    font-weight: bold;
+
+  }
+  .logo img{
+    margin: 5px;
+    height: calc(var(--navbar-height) - 10px);
+    border-radius: 8px;
+  }
+
+  /* Estilos del menú */
+  .menu {
+    display: var(--menu-display);
+    flex-direction: var(--menu-flex-direction);
+    justify-content: var(--menu-justify-content);
+    width: var(--menu-width);
+    background-color: var(--fondo-menu);
+    position: var(--menu-position);
+    top: var(--menu-position-top);
+    list-style: none;
+    margin-left: auto;
+  }
+
+  /* Estilos de los ítems del menú */
+  .menu li {
+    padding: 10px;
+  }
+
+  /* Estilos de los enlaces del menú */
+  .menu li a {
+    color: var(--fuente-navbar);
+    text-decoration: none;
+  }
+
+  /* Estilos del botón de conmutación */
+  .toggle {
+    display: var(--toggle-display);
+    cursor: pointer;
+    padding: 10px;
+    margin-left: var(--toggle-margin-left);
+  }
+
+  /* Estilos del icono del botón de conmutación */
+  .toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--fuente-navbar);
+    margin-bottom: 5px;
+  }
+
+  /*
+  @media (max-width: 768px) {
+    
+   
+    .menu {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      background-color: var(--fondo-menu);
+      position: absolute;
+      top: var(--navbar-height)
+
+
+      
+    }
+
+    .toggle {
+      display: block; 
+      margin-left: auto; 
+    }
+  
+
+    Mostrar el menú cuando el botón de conmutación esté activo
+    .toggle.active + .menu {
+      left: 0; 
+      display: block;
+ 
+    }
+    
+  }*/

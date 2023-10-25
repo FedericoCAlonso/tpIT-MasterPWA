@@ -1,0 +1,249 @@
+
+@import 
+url("./navbar.css")
+all;
+@import
+url("./paleta.css")
+all;
+@import
+url("fonts.css")
+all;
+
+html{
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Los colores están definidos en archivo paleta.css
+  Las configuraciones de fuentes están en el archivo fonts.css*/
+:root{
+
+  /* selector .secciones*/
+  --secciones-margin: auto;
+  --secciones-padding-top: var(--navbar-height);
+  --secciones-width: 90vw;
+  --secciones-height: 100vh;
+  --secciones-min-width: 800px ;
+  --secciones-min-height: 500px;
+
+  /* selector .tarjetas*/
+  --tarjetas-display: flex;
+  --tarjetas-flex-direction: column;
+  --tarjetas-width: 100%;
+  --tarjetas-height: 100%;
+  --tarjetas-border-radius: 10px;
+
+  /* selector .tarjetas h2*/
+  --tarjetas-h2-margin: 2rem;
+  --tarjetas-h2-text-align: center;
+
+  /* selector .form-grupo*/
+  --form-grupo-display: flex;
+  --form-grupo-flex-direction:row;
+  --form-grupo-justify-content:space-evenly;
+  --form-grupo-align-items: center;
+  --form-grupo-height: var(--navbar-height);
+  --form-grupo-padding: 1rem;
+  --form-grupo-border-radius: 10px;
+
+  /* selector .form-grupo label*/
+  --form-grupo-label-margin: 0px 5px;
+
+  /* selector .form-grupo input*/
+  --form-grupo-input-text-align: center;
+  --form-grupo-input-border: 0px;
+  --form-grupo-input-height: 95%;
+  --form-grupo-input-width: 50%;
+  --form-grupo-input-border-radius: 8px;
+
+  /* selector .form-grupo button*/
+  --form-grupo-button-height: 95%;
+  --form-grupo-button-width: 100px;
+  --form-grupo-button-margin: 5px;
+  --form-grupo-button-border: 0px;
+  --form-grupo-button-border-radius: 8px;
+  --form-grupo-button-padding-left: 1rem;
+  --form-grupo-button-padding-right: 1rem;
+
+  /* selector #resultado-clima*/
+  --resultado-clima-display: flex;
+  --resultado-clima-flex-wrap: nowrap;
+  --resultado-clima-flex-direction: column;
+
+  /* selector #resultado-clima p */
+  --resultado-clima-p-margin-left: 10%;
+
+  /* selector #resultado-clima div*/
+  --resultado-clima-div-display: flex;
+  --resultado-clima-div-flex-direction: row;
+  --resultado-clima-div-justify-content:center;
+  --resultado-clima-div-align-items: center;
+ 
+}
+
+@media (max-width: 768px) {
+  :root {
+    
+    /* selector .secciones*/
+    
+    --secciones-padding-top: var(--navbar-height);
+    --secciones-width: 100vw;
+    --secciones-height: auto;
+    --secciones-min-width: 300px ;
+    --secciones-min-height: 500px;
+
+    /* selector .tarjetas*/
+    --tarjetas-flex-direction: column;
+    --tarjetas-border-radius: 0px;
+
+    /* selector .tarjetas h2*/
+    --tarjetas-h2-margin: 2rem;
+    --tarjetas-h2-text-align: center;
+
+    /* selector .form-grupo*/
+    --form-grupo-display: flex;
+    --form-grupo-flex-direction:column;
+    --form-grupo-justify-content:space-evenly;
+    --form-grupo-align-items: center;
+    --form-grupo-height: auto;
+    --form-grupo-padding: 1rem;
+    --form-grupo-border-radius: 10px;
+
+    /* selector .form-grupo label*/
+    --form-grupo-label-margin: 5px;
+
+
+    /* selector .form-grupo input*/
+    --form-grupo-input-text-align: center;
+    --form-grupo-input-border: 0px;
+    --form-grupo-input-height: 50px;
+    --form-grupo-input-width: 70%;
+    --form-grupo-input-border-radius: 2px;
+
+    /* selector .form-grupo button*/
+    --form-grupo-button-height: 50px;
+    --form-grupo-button-width: 70%;
+    --form-grupo-button-margin: 5px;
+    --form-grupo-button-border: 0px;
+    --form-grupo-button-border-radius: 2px;
+    --form-grupo-button-padding-left: 1rem;
+    --form-grupo-button-padding-right: 1rem;
+
+    /* selector #resultado-clima*/
+    --resultado-clima-display: flex;
+    --resultado-clima-flex-wrap: nowrap;
+    --resultado-clima-flex-direction: column;
+
+    /* selector #resultado-clima p */
+    --resultado-clima-p-margin-left: 10%;
+
+    /* selector #resultado-clima div*/
+    --resultado-clima-div-display: flex;
+    --resultado-clima-div-flex-direction: row;
+    --resultado-clima-div-justify-content:center;
+    --resultado-clima-div-align-items: center;
+ 
+  }
+}
+
+.secciones {
+  margin: var(--secciones-margin);
+  padding-top: var(--secciones-padding-top);
+ 
+  width: var(--secciones-width);
+  height: var(--secciones-height);
+  min-width: var(--secciones-min-width);
+  min-height: var(--secciones-min-height);
+
+}
+.tarjetas {
+  display: var(--tarjetas-display);
+  flex-direction: var(--tarjetas-flex-direction);
+  width: var(--tarjetas-width);
+  height: var(--tarjetas-height);
+  border-radius: var(--tarjetas-border-radius);
+  background-color: var(--color-fondo-tarjeta-clima);
+  color: var(--color-fuente-tarjeta-clima);
+}
+.tarjetas h2 {
+  margin: var(--tarjetas-h2-margin);
+  /* variable definida en fonts.css*/
+  font-size: var(--tamanio-fuente-h2);
+  text-align: var(--tarjetas-h2-text-align);
+  /* variable definida en paleta.css*/
+  color: var(--color-fuente-titulo-resultado);
+}
+
+.form-grupo {
+  display: var(--form-grupo-display);
+  flex-direction: var(--form-grupo-flex-direction);
+  justify-content:var(--form-grupo-justify-content);
+  align-items: var(--form-grupo-align-items);
+  height: var(--form-grupo-height);
+  padding: var(--form-grupo-padding);
+  border-radius: var(--form-grupo-border-radius);
+
+  /* Colores definidos en paleta.css*/
+  background-color: var(--color-fondo-formulario);
+  color: var(--color-fuente-formulario);
+}
+.form-grupo label{
+  margin: var(--form-grupo-label-margin);
+  font-size: var(--label-form-font-size);
+}
+
+.form-grupo input{
+  background-color: var(--color-fondo-tarjeta-clima);
+  text-align: var(--form-grupo-input-text-align);
+  border: var(--form-grupo-input-border);
+  height: var(--form-grupo-input-height);
+  width: var(--form-grupo-input-width);
+  border-radius: var(--form-grupo-input-border-radius);
+  /* configuración de fuente en archivo fonts.css*/
+  font-size: var(--input-form-font-size);
+}
+.form-grupo button{
+  /* color definido en archivo paleta.css*/
+  background-color: var(--color-fondo-tarjeta-clima);
+  height: var(--form-grupo-button-height);
+  width: var(--form-grupo-button-width);
+  margin: var(--form-grupo-button-margin);
+  border: var(--form-grupo-button-border);
+  border-radius: var(--form-grupo-button-border-radius);
+  padding-left: var(--form-grupo-button-padding-left);
+  padding-right: var(--form-grupo-button-padding-right);
+}
+
+#resultado-clima {
+  display: var(--resultado-clima-display);
+  flex-direction: var(--resultado-clima-flex-direction);
+  flex-wrap: var(--resultado-clima-flex-wrap);
+  
+  
+}
+#resultado-clima p{
+  margin-left: var(--resultado-clima-p-margin-left);
+  /* configuracion de fuente en archivo fonts.css*/
+  font-size: var(--tamanio-fuente-informe);
+  /* configuración de color en archivo paleta.css*/
+  color: var(--color-fuente-resultados);
+}
+
+#resultado-clima div{
+  display: var(--resultado-clima-div-display);
+  flex-direction: var(--resultado-clima-div-flex-direction);
+  justify-content: var(--resultado-clima-div-justify-content);
+  align-items: var(--resultado-clima-div-align-items);
+  /* color definido en paleta.css*/
+  color: var(--color-fuente-titulo-resultado);
+  font-size: var(--tamanio-fuente-h2);
+}
+#resultado-clima div img{
+  height: 4rem;
+  width: 4rem;
+}

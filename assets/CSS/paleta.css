@@ -1,0 +1,18 @@
+:root {
+    --fuente-navbar: #F3FFE2;
+    --fondo-navbar:#1aabcf;
+    --fondo-menu: #1aabcf;
+
+    /*Tarjeta Clima*/
+    --color-fondo-tarjeta-clima: #F3FFE2;
+    --color-fuente-tarjeta-clima:  #082040;
+
+    --color-fondo-formulario: #FFE400;
+    --color-fuente-formulario: #082040;
+
+    --color-fuente-titulo-resultado: #1AAACF;
+    --color-fuente-resultados: #082040;
+}
+
+
+
