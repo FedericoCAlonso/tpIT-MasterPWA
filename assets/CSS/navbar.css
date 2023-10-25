@@ -24,9 +24,10 @@ all;
 
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) and (orientation: portrait) {
   /* Ocultar el menú y mostrar el botón de conmutación */
   :root {
+    --navbar-height: 5vh;
     /* Class menu*/
     --menu-display: none;
     --menu-flex-direction: column;
@@ -34,6 +35,7 @@ all;
     --menu-width: 100%;
     --menu-position: absolute;
     --menu-position-top: var(--navbar-height);
+  
 
     /* Class toggle*/
     --toggle-display: block; 
@@ -44,6 +46,7 @@ all;
   .toggle.active + .menu {
     left: 0;
     display: block;
+
 
   }
 
@@ -93,6 +96,7 @@ all;
     top: var(--menu-position-top);
     list-style: none;
     margin-left: auto;
+    font-size: var(--menu-font-size);
   }
 
   /* Estilos de los ítems del menú */
@@ -108,48 +112,22 @@ all;
 
   /* Estilos del botón de conmutación */
   .toggle {
+    height: 95%;
     display: var(--toggle-display);
     cursor: pointer;
     padding: 10px;
     margin-left: var(--toggle-margin-left);
+    background-color: var(--color-boton-menu);
+    border-radius: 5px;
   }
 
   /* Estilos del icono del botón de conmutación */
   .toggle span {
     display: block;
-    width: 25px;
-    height: 3px;
+    width: 60px;
+    height: 8px;
     background-color: var(--fuente-navbar);
     margin-bottom: 5px;
   }
 
-  /*
-  @media (max-width: 768px) {
-    
-   
-    .menu {
-      display: none;
-      flex-direction: column;
-      width: 100%;
-      background-color: var(--fondo-menu);
-      position: absolute;
-      top: var(--navbar-height)
-
-
-      
-    }
-
-    .toggle {
-      display: block; 
-      margin-left: auto; 
-    }
   
-
-    Mostrar el menú cuando el botón de conmutación esté activo
-    .toggle.active + .menu {
-      left: 0; 
-      display: block;
- 
-    }
-    
-  }*/

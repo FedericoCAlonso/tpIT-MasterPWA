@@ -36,6 +36,7 @@ html{
   --tarjetas-flex-direction: column;
   --tarjetas-width: 100%;
   --tarjetas-height: 100%;
+  --tarjetas-padding: 10%;
   --tarjetas-border-radius: 10px;
 
   /* selector .tarjetas h2*/
@@ -166,6 +167,7 @@ html{
   flex-direction: var(--tarjetas-flex-direction);
   width: var(--tarjetas-width);
   height: var(--tarjetas-height);
+  padding: var(--tarjetas-padding);
   border-radius: var(--tarjetas-border-radius);
   background-color: var(--color-fondo-tarjeta-clima);
   color: var(--color-fuente-tarjeta-clima);
@@ -178,6 +180,11 @@ html{
   /* variable definida en paleta.css*/
   color: var(--color-fuente-titulo-resultado);
 }
+
+.tarjetas p{
+  font-size: var(--p-tarjeta-font-size)
+}
+
 
 .form-grupo {
   display: var(--form-grupo-display);
@@ -194,7 +201,7 @@ html{
 }
 .form-grupo label{
   margin: var(--form-grupo-label-margin);
-  font-size: var(--label-form-font-size);
+  font-size: var(--label-fomr-font-size);
 }
 
 .form-grupo input{
@@ -217,6 +224,7 @@ html{
   border-radius: var(--form-grupo-button-border-radius);
   padding-left: var(--form-grupo-button-padding-left);
   padding-right: var(--form-grupo-button-padding-right);
+  font-size: var(--input-form-font-size)
 }
 
 #resultado-clima {
@@ -247,3 +255,4 @@ html{
   height: 4rem;
   width: 4rem;
 }
+
