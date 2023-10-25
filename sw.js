@@ -1,4 +1,4 @@
-const urlStart = "/tpIT-MasterPWA";
+const urlStart = "";/* "tpIT-MasterPWA/"; */
 
 self.addEventListener("install", async event => {
     // sólo si queremos forzar al viejo SW a dejar de estar activo
@@ -6,7 +6,7 @@ self.addEventListener("install", async event => {
 
     // precache - al momento de instalar el SW, vamos a descargar archivos para servir luego
     const cache = await caches.open("recursos");
-    await cache.addAll([urlStart+"/tpIT-MasterPWA/", urlStart+"index.html", urlStart+"assets/CSS/fonts.css",urlStart+"assets/CSS/navbar.css",
+    await cache.addAll([urlStart+"/", urlStart+"index.html", urlStart+"assets/CSS/fonts.css",urlStart+"assets/CSS/navbar.css",
     urlStart+"assets/CSS/paleta.css",urlStart+"assets/CSS/style.css", urlStart+"assets/iconos/logoLocoWeather_512.png",urlStart+"assets/iconos/logoSimple.png", 
         "https://fonts.googleapis.com/css2?family=Lobster&display=swap",
         "https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap"

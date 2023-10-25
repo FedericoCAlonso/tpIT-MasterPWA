@@ -9,6 +9,10 @@
     <link id="icono" rel="icon" href="./assets//iconos/logoLocoWeather_512.png">
     <link rel="stylesheet" href="./assets/CSS/style.css">
     <script src="./instalar.js" defer></script>
+    <script>
+        navigator.serviceWorker.register("./sw.js");
+        navigator.storage.persist();
+    </script>
    
 </head>
 <body>
