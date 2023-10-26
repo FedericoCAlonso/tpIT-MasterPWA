@@ -260,6 +260,14 @@ html{
   color: var(--color-fuente-titulo-resultado);
   font-size: var(--tamanio-fuente-h2);
 }
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: start;
+  height: 15vh;
+  padding: 2rem;
+}
 #resultado-clima div img{
   height: 4rem;
   width: 4rem;
